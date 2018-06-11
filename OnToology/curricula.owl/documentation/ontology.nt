@@ -1,10 +1,26 @@
 <http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/lsarni/ontologies> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/lsarni/ontologies/acm-ccs> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/lsarni/ontologies/competencies> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/lsarni/ontologies/competences> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/lsarni/ontologies/degrees> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/lsarni/ontologies/professors> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2002/07/owl#imports> <http://www.semanticweb.org/lsarni/ontologies/topics> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology that describes the curricula of the degree in Software Engineering at Universidad ORT Uruguay."@en .
 <http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2000/01/rdf-schema#comment> "Una ontolog\u00EDa que describe el curr\u00EDculo de la carrera Ingenier\u00EDa en Sistemas en la Universidad ORT Uruguay."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2000/01/rdf-schema#label> "OntoCIS"@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula> <http://www.w3.org/2000/01/rdf-schema#label> "OntoCIS"@es .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/lsarni/ontologies/degrees#requiredFor
+<http://www.semanticweb.org/lsarni/ontologies/degrees#requiredFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/degrees#requiredFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
+# 
 # 
 # 
 # #################################################################
@@ -17,89 +33,75 @@
 # http://www.semanticweb.org/lsarni/ontologies#partOf
 <http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/competencies#Competence> .
-<http://www.semanticweb.org/lsarni/ontologies/competencies#Competence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica el grado de contribuci\u00F3n al desarrollo de una competencia"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the degree of contribution to the development of a competence"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/2000/01/rdf-schema#label> "contributesTo"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> <http://www.w3.org/2000/01/rdf-schema#label> "contribuyeA"@es .
+# http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que asignaturas debe haber cursado un estudiante para poder inscribirse o aprovar una asignatura."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/2000/01/rdf-schema#comment> "It states which courses the student needs to take in order to be allowed to enroll or pass a course."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/2000/01/rdf-schema#label> "esPrevia"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> <http://www.w3.org/2000/01/rdf-schema#label> "isPrerequiste"@en .
 # 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#develops
-<http://www.semanticweb.org/lsarni/ontologies/curricula#develops> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#develops> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#develops> <http://www.w3.org/2000/01/rdf-schema#comment> "La competencia es total o parcialmente desarrollada, es evaluada en el curso y se cuenta con evidencia de la evaluaci\u00F3n."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#develops> <http://www.w3.org/2000/01/rdf-schema#comment> "The competence is totally or partially developed, it is assessed and there is evidence of the assessment."@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#develops> <http://www.w3.org/2000/01/rdf-schema#label> "desarrolla"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#develops> <http://www.w3.org/2000/01/rdf-schema#label> "develops"@en .
+# http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que asignaturas que deben haber cursado el estudiante para poder inscribirse a una asignatura. \nSolamente si el estudiante ha obtenido el cr\u00E9dito parcial o total de estas asignaturas, seg\u00FAn corresponda, podr\u00E1 inscribirse a la asignatura y eventualmente obtener el cr\u00E9dito parcial para el mismo."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#comment> "It states which courses a student needs to take before hand in order to be allowed to enroll for a course.\nOnly if the student has obtained partial or total credit for these subjects will he be able to enroll in the course and eventually obtain partial credit for it."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#label> "esPreviaParaInscribirse"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#label> "isPrerequisiteToEnroll"@en .
 # 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/curricula#Learning_Outcome> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Learning outcome for a course or degree"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Objetivo de aprendizaje que tiene un curso o t\u00EDtulo."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome> <http://www.w3.org/2000/01/rdf-schema#comment> "hasLearningOutcome"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasLearningOutcome> <http://www.w3.org/2000/01/rdf-schema#label> "tieneComoObjetivoDeAprendizaje"@es .
+# http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisite> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que asignaturas debe haber cursado previamente un estudiante para poder aprobar (obtener el cr\u00E9dito total) una asignatura."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#comment> "It states which courses the student needs to take before hand in order to be able to pass (get the total credits) a certain course."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#label> "esPreviaParaAprobaci\u00F3n"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#label> "isPrerequisiteToPass"@en .
 # 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Asignaturas que deben cursarse antes de cursar esta asignatura."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Courses that need to be taken before taking this course."@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/2000/01/rdf-schema#comment> "hasPrerequisteOf"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> <http://www.w3.org/2000/01/rdf-schema#label> "tieneComoPrevia"@es .
+# http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToEnroll
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToEnroll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica para que asignaturas el estudiante debe tener el cr\u00E9dito parcial antes de poder inscribirse a una asignatura."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#comment> "It states which courses a student must have the partial credit for in order to enroll to another course."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#label> "creditoParcialEsPreviaParaInscribirse"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#label> "partialCreditIsPrerequisiteToEnroll"@en .
 # 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/professors#Professor> .
-<http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un profesor est\u00E1 a cargo de un curso"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that a professor is in charge of a course"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#label> "aCargoDe"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#label> "inChargeOf"@en .
-# 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#partiallyDevelops
-<http://www.semanticweb.org/lsarni/ontologies/curricula#partiallyDevelops> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#partiallyDevelops> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#contributesTo> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#partiallyDevelops> <http://www.w3.org/2000/01/rdf-schema#comment> "Contribuye de alguna manera al desarrollo de la competencia, pero no esta no es evaluada."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#partiallyDevelops> <http://www.w3.org/2000/01/rdf-schema#comment> "It contributes to the development of the competence but it is not assessed."@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#partiallyDevelops> <http://www.w3.org/2000/01/rdf-schema#label> "desarrollaParcialmente"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#partiallyDevelops> <http://www.w3.org/2000/01/rdf-schema#label> "partiallyDevelops"@en .
-# 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForApproval
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForApproval> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForApproval> <http://www.w3.org/2000/01/rdf-schema#comment> "Asignaturas de las cuales se debe tener el cr\u00E9dito total antes de cursar esta asignatura."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForApproval> <http://www.w3.org/2000/01/rdf-schema#comment> "Courses for which the student must have obtained the total credit before taking this course"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForApproval> <http://www.w3.org/2000/01/rdf-schema#label> "prerequisiteForApproval"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForApproval> <http://www.w3.org/2000/01/rdf-schema#label> "previaParaAprobaci\u00F3n"@es .
-# 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForInscription
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForInscription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForInscription> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#hasPrerequisiteOf> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForInscription> <http://www.w3.org/2000/01/rdf-schema#comment> "Asignaturas de las cuales se debe tener el cr\u00E9dito parcial antes de cursar esta asignatura."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForInscription> <http://www.w3.org/2000/01/rdf-schema#comment> "Courses for which the student must have obtained the partial credit before taking this course"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForInscription> <http://www.w3.org/2000/01/rdf-schema#label> "prerequisiteForInscription"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#prerequisiteForInscription> <http://www.w3.org/2000/01/rdf-schema#label> "previaParaInscripci\u00F3n"@es .
+# http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToPass
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToPass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica para que asignaturas el estudiante debe tener el cr\u00E9dito parcial antes de poder inscribirse a una asignatura."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#comment> "It states which courses a student must have the partial credit for in order to pass (obtain total credits) another course."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#label> "creditoParcialEsPreviaParaAprobar"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#partialCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#label> "partialCreditIsPrerequisiteToPass"@en .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn
 <http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/acm-ccs#Topic> .
-<http://www.semanticweb.org/lsarni/ontologies/acm-ccs#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/topics#Topic> .
+<http://www.semanticweb.org/lsarni/ontologies/topics#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un tema se ese\u00F1a o dicta durante un curso"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates that a topic is taught during a course"@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un tema se ese\u00F1a o dicta durante una asignatura"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#comment> "It states that a topic is taught during a course"@en .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#label> "ense\u00F1adoEn"@es .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#taughtIn> <http://www.w3.org/2000/01/rdf-schema#label> "taughtIn"@en .
+# 
+# http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToEnroll
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToEnroll> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToEnroll> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica para que asignaturas el estudiante debe tener el cr\u00E9dito total antes de poder inscribirse a una asignatura."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#comment> "It states which courses a student must have the total credit for in order to enroll to another course."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#label> "creditoTotalEsPreviaParaInscribirse"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToEnroll> <http://www.w3.org/2000/01/rdf-schema#label> "totalCreditIsPrerequisiteToEnroll"@en .
+# 
+# http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToPass
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToPass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#isPrerequisiteToPass> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica para que asignaturas el estudiante debe tener el cr\u00E9dito total antes de poder inscribirse a una asignatura."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#comment> "It states which courses a student must have the total credit for in order to pass (obtain total credits) another course."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#label> "creditoTotalEsPreviaParaIAprobar"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#totalCreditIsPrerequisiteToPass> <http://www.w3.org/2000/01/rdf-schema#label> "totalCreditIsPrerequisiteToPass"@en .
 # 
 # 
 # 
@@ -216,18 +218,14 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # #################################################################
 # 
 # 
-# http://www.semanticweb.org/lsarni/ontologies/acm-ccs#Topic
-# 
-# http://www.semanticweb.org/lsarni/ontologies/competencies#Competence
-# 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2000/01/rdf-schema#comment> "Asignatura que los estudiantes deben cursar como parte de la curr\u00EDcula para obtener un t\u00EDtulo."@es .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2000/01/rdf-schema#comment> "Course that the students must attend as part of the curricula to obtain a degree."@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Core_Course"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Curso_Obligatorio"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Core Course"@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Core_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Curso Obligatorio"@es .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#Course
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -247,17 +245,23 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#Curricula
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Curricula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Curricula> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> _:genid24 .
+_:genid24 <http://www.w3.org/2002/07/owl#inverseOf> <http://www.semanticweb.org/lsarni/ontologies#partOf> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid25 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lsarni/ontologies/curricula#Year> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Curricula> <http://www.w3.org/2000/01/rdf-schema#comment> "Conjunto de ense\u00F1anzas y pr\u00E1cticas que, con determinada disposici\u00F3n, han de cursarse para cumplir un ciclo de estudios u obtener un t\u00EDtulo."@es .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Curricula> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of courses that need to be taken in order to obtain a certain degree."@en .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Curricula> <http://www.w3.org/2000/01/rdf-schema#label> "Curricula"@en .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Curricula> <http://www.w3.org/2000/01/rdf-schema#label> "Curriculo"@es .
-# 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#Degree
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Degree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Degree> <http://www.w3.org/2000/01/rdf-schema#comment> "Distinci\u00F3n otorgada a los estudiantes despu\u00E9s de la terminaci\u00F3n exitosa de un conjunto de asignaturas."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Degree> <http://www.w3.org/2000/01/rdf-schema#comment> "Qualification awarded to students upon successful completion of set of courses."@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Degree> <http://www.w3.org/2000/01/rdf-schema#label> "Degree"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Degree> <http://www.w3.org/2000/01/rdf-schema#label> "T\u00EDtulo"@es .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -265,38 +269,32 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> <http://www.w3.org/2000/01/rdf-schema#comment> "Asignatura que los estudiantes pueden cursar seg\u00FAn sus intereses y preferencias. Para obtener un t\u00EDtulo, los estudiantes deben cursar un conjunto o una cantidad determinada de asignaturas electivas, definida para cada t\u00EDtulo."@es .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> <http://www.w3.org/2000/01/rdf-schema#comment> "Course that the students can attend according their interests and preferences. To obtain a degree, a student must attend a set or certain amount of elective courses defined by each degree."@en .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Electiva"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Elective_Course"@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Elective Course"@en .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/lsarni/ontologies#partOf> .
-_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge_Area"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/2000/01/rdf-schema#label> "\u00C1rea_Tem\u00E1tica"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/2000/01/rdf-schema#comment> "Topical areas of study in which the knowledge groups are divided."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/2000/01/rdf-schema#comment> "\u00C1reas tem\u00E1ticas en las que se dividen los grupos tem\u00E1ticos."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Area"@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Area> <http://www.w3.org/2000/01/rdf-schema#label> "\u00C1rea Tem\u00E1tica"@es .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> <http://www.w3.org/2000/01/rdf-schema#label> "Grupo_Tem\u00E1tico"@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge_Group"@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Grupos tem\u00E1ticos en los que se divide el conocimiento abarcado por el curr\u00EDculo."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Knowledge groups in which the knowledge body is divided."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> <http://www.w3.org/2000/01/rdf-schema#label> "Grupo Tem\u00E1tico"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Knowledge_Group> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Group"@en .
 # 
-# http://www.semanticweb.org/lsarni/ontologies/curricula#Learning_Outcome
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Learning_Outcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Learning_Outcome> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/lsarni/ontologies#partOf> .
-_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/lsarni/ontologies/competencies#Competence> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Learning_Outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "A very specific statement that describes exactly what a student will be able to do in some measurable way"@en .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Learning_Outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "Una frase que describe exactamente lo que un estudiante podr\u00E1 hacer de manera mensurable/evaluable."@es .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Learning_Outcome> <http://www.w3.org/2000/01/rdf-schema#label> "Objetivo_de_Aprendizaje"@es .
+# http://www.semanticweb.org/lsarni/ontologies/curricula#Placeholder_Course
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Placeholder_Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Placeholder_Course> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lsarni/ontologies/curricula#Elective_Course> .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Placeholder_Course> <http://www.w3.org/2000/01/rdf-schema#comment> "Asignatura utilizada para indicar que el estudiante debe tomar una asignatura electiva a su elecci\u00F3n."@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Placeholder_Course> <http://www.w3.org/2000/01/rdf-schema#comment> "Course used to state that the student must take a course but can choose among any elective course."@en .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Placeholder_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Curso Placeholder"@es .
+<http://www.semanticweb.org/lsarni/ontologies/curricula#Placeholder_Course> <http://www.w3.org/2000/01/rdf-schema#label> "Placeholder Course"@en .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/curricula#Term
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Term> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/lsarni/ontologies/curricula#Term> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/lsarni/ontologies#partOf> .
-_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/lsarni/ontologies/curricula#Year> .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Term> <http://www.w3.org/2000/01/rdf-schema#comment> "A portion of an academic year, the time during which an educational institution holds classes."@en .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Term> <http://www.w3.org/2000/01/rdf-schema#label> "Parte de un a\u00F1o acad\u00E9mico, el tiempo durante el cual una instituci\u00F3n educativa imparte clases a los estudiantes que cursan una o mas asignaturas."@es .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Term> <http://www.w3.org/2000/01/rdf-schema#label> "Periodo"@es .
@@ -309,6 +307,6 @@ _:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Year> <http://www.w3.org/2000/01/rdf-schema#label> "A\u00F1o"@es .
 <http://www.semanticweb.org/lsarni/ontologies/curricula#Year> <http://www.w3.org/2000/01/rdf-schema#label> "Year"@en .
 # 
-# http://www.semanticweb.org/lsarni/ontologies/professors#Professor
+# http://www.semanticweb.org/lsarni/ontologies/topics#Topic
 # 
 # Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

@@ -8,7 +8,9 @@
 
 <http://www.semanticweb.org/lsarni/ontologies> rdf:type owl:Ontology ;
                                                 rdfs:comment "Contiene propiedades genéricas utilizadas en un conjunto de ontologías."@es ,
-                                                             "It contains generic properties used on a set of ontologies."@en .
+                                                             "It contains generic properties used on a set of ontologies."@en ;
+                                                rdfs:label "OntoCIS Generic"@en ,
+                                                           "OntoCIS Genérico"@es .
 
 #################################################################
 #    Object Properties
@@ -19,7 +21,7 @@
         rdfs:subPropertyOf owl:topObjectProperty ;
         rdf:type owl:TransitiveProperty ;
         rdfs:comment "Indica la composición entre individuos"@es ,
-                     "Represents part-whole relations"@en ;
+                     "It states part-whole relations"@en ;
         rdfs:label "partOf"@en ,
                    "parteDe"@es .
 

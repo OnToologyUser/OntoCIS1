@@ -1,6 +1,8 @@
 <http://www.semanticweb.org/lsarni/ontologies/professors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://www.semanticweb.org/lsarni/ontologies/professors> <http://www.w3.org/2000/01/rdf-schema#comment> "Brinda informaci\u00F3n b\u00E1sica sobre los profesores de una facultad o universidad."@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides basic information about the professors of an university or faculty."@en .
+<http://www.semanticweb.org/lsarni/ontologies/professors> <http://www.w3.org/2000/01/rdf-schema#label> "OntoCIS Profesores"@es .
+<http://www.semanticweb.org/lsarni/ontologies/professors> <http://www.w3.org/2000/01/rdf-schema#label> "OntoCIS Professors"@en .
 # 
 # 
 # #################################################################
@@ -16,18 +18,31 @@
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/professors#Person> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica el nivel de formaci\u00F3n m\u00E1s alto alcanzado por una persona."@es .
-<http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the highest degree aquired by a person."@en .
+<http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "It states the highest degree aquired by a person."@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "hasEducationLevel"@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "tieneNivelDeFormaci\u00F3n"@es .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/member> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/professors#Person> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/lsarni/ontologies/professors#Nationality> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica la nacionalidad de una persona."@es .
-<http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates the nationality of a person."@en .
+<http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#comment> "It states the nationality of a person."@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#label> "hasNationality"@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality> <http://www.w3.org/2000/01/rdf-schema#label> "tieneNacionalidad"@es .
+# 
+# http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf
+<http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/professors#Person> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que una persona esta a cargo de algo."@es .
+<http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "It states that a person is in charge of something."@en .
+<http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#label> "aCargoDe"@es .
+<http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf> <http://www.w3.org/2000/01/rdf-schema#label> "inChargeOf"@en .
+# 
+# http://xmlns.com/foaf/0.1/member
+<http://xmlns.com/foaf/0.1/member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # 
 # 
@@ -51,21 +66,33 @@
 # 
 # http://www.semanticweb.org/lsarni/ontologies/professors#name
 <http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/professors#foaf:givenName> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/professors#Person> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#comment> "El nombre de pila de una persona"@en .
+<http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The given name of some person"@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#name> <http://www.w3.org/2000/01/rdf-schema#label> "nombre"@es .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/professors#surname
 <http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticweb.org/lsarni/ontologies/professors#foaf:familyName> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/lsarni/ontologies/professors#Person> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#comment> "El apellido de una persona"@en .
+<http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#comment> "The family name of some person"@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#label> "apellido"@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors#surname> <http://www.w3.org/2000/01/rdf-schema#label> "surname"@en .
+# 
+# http://www.semanticweb.org/lsarni/ontologies/professors#foaf:familyName
+<http://www.semanticweb.org/lsarni/ontologies/professors#foaf:familyName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#foaf:familyName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+# 
+# http://www.semanticweb.org/lsarni/ontologies/professors#foaf:givenName
+<http://www.semanticweb.org/lsarni/ontologies/professors#foaf:givenName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#foaf:givenName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 # 
 # 
 # 
@@ -101,8 +128,8 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semantic
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level> <http://www.w3.org/2000/01/rdf-schema#comment> "Degrees that can be obtained by a person."@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level> <http://www.w3.org/2000/01/rdf-schema#comment> "T\u00EDtulos que pueden ser obtenidos por una persona."@es .
-<http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level> <http://www.w3.org/2000/01/rdf-schema#label> "Education_Level"@en .
-<http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel_de_formaci\u00F3n"@es .
+<http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level> <http://www.w3.org/2000/01/rdf-schema#label> "Education Level"@en .
+<http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de formaci\u00F3n"@es .
 # 
 # http://www.semanticweb.org/lsarni/ontologies/professors#Nationality
 <http://www.semanticweb.org/lsarni/ontologies/professors#Nationality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -127,6 +154,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/lsarni/ontologies/professors#Uruguayan> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#Nationality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Group> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Nationality> <http://www.w3.org/2000/01/rdf-schema#comment> "Condici\u00F3n que reconoce a una persona la pertenencia a un estado o naci\u00F3n."@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Nationality> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of belonging to a particular nation."@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Nationality> <http://www.w3.org/2000/01/rdf-schema#label> "Nacionalidad"@es .
@@ -134,6 +162,7 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # http://www.semanticweb.org/lsarni/ontologies/professors#Person
 <http://www.semanticweb.org/lsarni/ontologies/professors#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/lsarni/ontologies/professors#Person> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Person> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "A human being."@en .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Un ser humano."@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
@@ -143,9 +172,15 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/lsarni/ontologies/professors#Person> .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/2000/01/rdf-schema#comment> "Person that teaches or is in charge of a course."@en .
-<http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/2000/01/rdf-schema#comment> "Persona que dicta o est\u00E1 a cargo de un curso."@es .
+<http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/2000/01/rdf-schema#comment> "Persona que dicta o est\u00E1 a cargo de una asignatura."@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/2000/01/rdf-schema#label> "Docente"@es .
 <http://www.semanticweb.org/lsarni/ontologies/professors#Professor> <http://www.w3.org/2000/01/rdf-schema#label> "Professor"@en .
+# 
+# http://xmlns.com/foaf/0.1/Group
+<http://xmlns.com/foaf/0.1/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # 
 # 

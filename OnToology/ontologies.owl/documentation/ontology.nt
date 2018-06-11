@@ -1,6 +1,8 @@
 <http://www.semanticweb.org/lsarni/ontologies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <http://www.semanticweb.org/lsarni/ontologies> <http://www.w3.org/2000/01/rdf-schema#comment> "Contiene propiedades gen\u00E9ricas utilizadas en un conjunto de ontolog\u00EDas."@es .
 <http://www.semanticweb.org/lsarni/ontologies> <http://www.w3.org/2000/01/rdf-schema#comment> "It contains generic properties used on a set of ontologies."@en .
+<http://www.semanticweb.org/lsarni/ontologies> <http://www.w3.org/2000/01/rdf-schema#label> "OntoCIS Generic"@en .
+<http://www.semanticweb.org/lsarni/ontologies> <http://www.w3.org/2000/01/rdf-schema#label> "OntoCIS Gen\u00E9rico"@es .
 # 
 # 
 # #################################################################
@@ -15,7 +17,7 @@
 <http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
 <http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica la composici\u00F3n entre individuos"@es .
-<http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents part-whole relations"@en .
+<http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/2000/01/rdf-schema#comment> "It states part-whole relations"@en .
 <http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/2000/01/rdf-schema#label> "partOf"@en .
 <http://www.semanticweb.org/lsarni/ontologies#partOf> <http://www.w3.org/2000/01/rdf-schema#label> "parteDe"@es .
 # 

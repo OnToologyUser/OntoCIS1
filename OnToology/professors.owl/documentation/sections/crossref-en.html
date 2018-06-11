@@ -5,7 +5,7 @@ This section provides details for each class and property defined by [Ontology N
    <ul class="hlist">
       <li>
          <a href="#Education_Level"
-            title="http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level">Education_Level</a>
+            title="http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level">Education Level</a>
       </li>
       <li>
          <a href="#Nationality"
@@ -21,7 +21,7 @@ This section provides details for each class and property defined by [Ontology N
       </li>
    </ul>
    <div class="entity" id="Education_Level">
-      <h3>Education_Level<sup class="type-c" title="class">c</sup>
+      <h3>Education Level<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
@@ -66,6 +66,11 @@ This section provides details for each class and property defined by [Ontology N
                title="http://www.semanticweb.org/lsarni/ontologies/professors#Russian">Russian</a> , <a href="#Spanish"
                title="http://www.semanticweb.org/lsarni/ontologies/professors#Spanish">Spanish</a> , <a href="#Uruguayan"
                title="http://www.semanticweb.org/lsarni/ontologies/professors#Uruguayan">Uruguayan</a> }</dd>
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://xmlns.com/foaf/0.1/Group">group</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasNationality"
@@ -85,6 +90,11 @@ This section provides details for each class and property defined by [Ontology N
          <span class="markdown">A human being.</span>
       </div>
       <dl class="description">
+         <dt>is equivalent to</dt>
+         <dd>
+            <span class="dotted" title="http://xmlns.com/foaf/0.1/Person">person</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Professor"
@@ -97,6 +107,8 @@ This section provides details for each class and property defined by [Ontology N
                title="http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel">hasEducationLevel</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasNationality"
                title="http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality">hasNationality</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#inChargeOf"
+               title="http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf">inChargeOf</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#name"
                title="http://www.semanticweb.org/lsarni/ontologies/professors#name">name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#surname"
@@ -141,6 +153,10 @@ This section provides details for each class and property defined by [Ontology N
          <a href="#hasNationality"
             title="http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality">hasNationality</a>
       </li>
+      <li>
+         <a href="#inChargeOf"
+            title="http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf">inChargeOf</a>
+      </li>
    </ul>
    <div class="entity" id="hasEducationLevel">
       <h3>hasEducationLevel<sup class="type-op" title="object property">op</sup>
@@ -150,7 +166,7 @@ This section provides details for each class and property defined by [Ontology N
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/lsarni/ontologies/professors#hasEducationLevel</p>
       <div class="comment">
-         <span class="markdown">It indicates the highest degree aquired by a person.</span>
+         <span class="markdown">It states the highest degree aquired by a person.</span>
       </div>
       <div class="description">
          <dl>
@@ -167,7 +183,7 @@ This section provides details for each class and property defined by [Ontology N
             <dt>has range</dt>
             <dd>
                <a href="#Education_Level"
-                  title="http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level">Education_Level</a>
+                  title="http://www.semanticweb.org/lsarni/ontologies/professors#Education_Level">Education Level</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -181,10 +197,15 @@ This section provides details for each class and property defined by [Ontology N
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/lsarni/ontologies/professors#hasNationality</p>
       <div class="comment">
-         <span class="markdown">It indicates the nationality of a person.</span>
+         <span class="markdown">It states the nationality of a person.</span>
       </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://xmlns.com/foaf/0.1/member">member</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has domain</dt>
             <dd>
                <a href="#Person"
@@ -200,9 +221,46 @@ This section provides details for each class and property defined by [Ontology N
          </dl>
       </div>
    </div>
+   <div class="entity" id="inChargeOf">
+      <h3>inChargeOf<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/lsarni/ontologies/professors#inChargeOf</p>
+      <div class="comment">
+         <span class="markdown">It states that a person is in charge of something.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topObjectProperty">top object property</span>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Person"
+                  title="http://www.semanticweb.org/lsarni/ontologies/professors#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties" class="list">Data Properties</h3>
    <ul class="hlist">
+      <li>
+         <a href="#foaf:familyName"
+            title="http://www.semanticweb.org/lsarni/ontologies/professors#foaf:familyName">
+            <span>foaf:family name</span>
+         </a>
+      </li>
+      <li>
+         <a href="#foaf:givenName"
+            title="http://www.semanticweb.org/lsarni/ontologies/professors#foaf:givenName">
+            <span>foaf:given name</span>
+         </a>
+      </li>
       <li>
          <a href="#isExperienced"
             title="http://www.semanticweb.org/lsarni/ontologies/professors#isExperienced">isExperienced</a>
@@ -216,6 +274,50 @@ This section provides details for each class and property defined by [Ontology N
             title="http://www.semanticweb.org/lsarni/ontologies/professors#surname">surname</a>
       </li>
    </ul>
+   <div class="entity" id="foaf:familyName">
+      <h3>foaf:family name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/lsarni/ontologies/professors#foaf:familyName</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#surname"
+                  title="http://www.semanticweb.org/lsarni/ontologies/professors#surname">surname</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="foaf:givenName">
+      <h3>foaf:given name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://www.semanticweb.org/lsarni/ontologies/professors#foaf:givenName</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#name"
+                  title="http://www.semanticweb.org/lsarni/ontologies/professors#name">name</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="isExperienced">
       <h3>isExperienced<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -254,13 +356,18 @@ This section provides details for each class and property defined by [Ontology N
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/lsarni/ontologies/professors#name</p>
+      <div class="comment">
+         <span class="markdown">El nombre de pila de una persona</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="#foaf:givenName"
+                  title="http://www.semanticweb.org/lsarni/ontologies/professors#foaf:givenName">foaf:given name</a>
+               <sup class="type-dp" title="data property">dp</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
@@ -282,13 +389,18 @@ This section provides details for each class and property defined by [Ontology N
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/lsarni/ontologies/professors#surname</p>
+      <div class="comment">
+         <span class="markdown">El apellido de una persona</span>
+      </div>
       <div class="description">
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
-               <span class="dotted" title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</span>
+               <a href="#foaf:familyName"
+                  title="http://www.semanticweb.org/lsarni/ontologies/professors#foaf:familyName">foaf:family name</a>
+               <sup class="type-dp" title="data property">dp</sup>
             </dd>
             <dt>has domain</dt>
             <dd>
